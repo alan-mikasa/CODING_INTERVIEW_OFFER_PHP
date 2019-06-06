@@ -18,3 +18,4 @@ $result = mystrtoupper($origin);
 echo 'result string:'.$result.PHP_EOL;
 
 
+//1.1
