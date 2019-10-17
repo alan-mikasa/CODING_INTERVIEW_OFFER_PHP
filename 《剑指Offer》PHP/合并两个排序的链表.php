@@ -32,3 +32,31 @@ function Merge($pHead1, $pHead2){
     }
     return $merged;
 }
+
+function Merge2($pHead1, $pHead2)
+{
+    // write code here
+
+
+    $new_head = new ListNode(null);
+    $p = $pHead1;
+    $q = $pHead2;
+    while($p && $q){
+        if($p->val < $q->val){
+            $new_head->next = $p;
+            $p = $p->next;
+        }else{
+            $new_head->next = $q;
+            $q = $q->next;
+        }
+        $new_head = $new_head->next;
+
+    }
+    while($p){
+        $new_head->next = $p;
+    }
+    while($q){
+        $new_head->next = $q;
+    }
+    return $new_head;
+}
