@@ -21,4 +21,17 @@ function jumpFloor($number)
     return $result[$number];
 }
 
-print_r(jumpFloor(3));
+
+function jumpFloor2($number)
+{
+    // write code here
+    $res = [0,1,2];
+    $i = 3;
+    while($i <= $number){
+        $res[$i] = $res[$i - 1] + $res[$i - 2];
+        $i++;
+    }
+    return $res[$number];
+}
+
+print_r(jumpFloor2(3));
